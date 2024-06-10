@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="jcms-maven-lib" />
+      <option name="name" value="jcms-maven-lib" />
+      <option name="url" value="https://inst0.nexus-ci.corp.dev.vtb/repository/jcms-maven-lib/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus-cd" />
+      <option name="name" value="nexus-cd" />
+      <option name="url" value="https://nexus-cd.region.vtb.ru/repository/jcms-maven-test" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus-ci-pfom" />
+      <option name="name" value="nexus-ci-pfom" />
+      <option name="url" value="https://nexus-ci.corp.dev.vtb/repository/pfomb-maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tbcor-lib" />
+      <option name="name" value="tbcor-lib" />
+      <option name="url" value="https://nexus-ci.corp.dev.vtb/repository/tbcor-maven-lib/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://nexus-ci.corp.dev.vtb/repository/tbcor-maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="tbcor" />
+      <option name="name" value="tbcor" />
+      <option name="url" value="https://nexus-ci.corp.dev.vtb/repository/tbcor-maven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus-ci-pfomb" />
+      <option name="name" value="nexus-ci-pfomb" />
+      <option name="url" value="https://nexus-ci.corp.dev.vtb/repository/pfomb-maven-proxy-group" />
+    </remote-repository>
+  </component>
+</project>

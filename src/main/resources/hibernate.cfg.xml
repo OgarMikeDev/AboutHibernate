@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:49161/testSkill</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">postgrespw</property>
+        <property name="connection.pool_size">2</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+        <mapping class="com.skillbox.hibernate.first.User"/>
+        <mapping class="com.skillbox.hibernate.oneToOne.Employee"/>
+        <mapping class="com.skillbox.hibernate.oneToOne.EmployeeDetails"/>
+        <mapping class="com.skillbox.hibernate.mToM.Book"/>
+        <mapping class="com.skillbox.hibernate.mToM.Reader"/>
+        <mapping class="com.skillbox.hibernate.manyToOne.University"/>
+        <mapping class="com.skillbox.hibernate.manyToOne.Student"/>
+        <mapping class="com.skillbox.hibernate.mToM.Reader"/>
+    </session-factory>
+</hibernate-configuration>
