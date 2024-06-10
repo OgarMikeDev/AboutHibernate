@@ -50,10 +50,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "com.skillbox.hibernate.first.User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", score=" + score +
-                '}';
+        return "Id: " + id + ", name: " + name + "score: " + score;
     }
 }

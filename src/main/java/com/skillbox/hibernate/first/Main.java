@@ -22,7 +22,9 @@ public class Main {
         Transaction transaction = session.beginTransaction();
 
         User user = session.get(User.class, 1L);
-        System.out.println(user);
+        User user2 = session.get(User.class, 2L);
+        User user3 = session.get(User.class, 3L);
+        System.out.println(user + "\n" + user2 + "\n" + user3);
 
         transaction.commit();
         sessionFactory.close();
