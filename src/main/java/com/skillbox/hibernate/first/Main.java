@@ -16,21 +16,12 @@ public class Main {
     public static void main(String[] args) {
         Session session = sessionFactory.getCurrentSession();
         try {
-            session.getTransaction().begin();
-            Reader reader = session.get(Reader.class, 1L);
-
-            System.out.println(reader.getBooks());
-            session.getTransaction().commit();
-            session.close();
-
-//            System.out.println(university.getTitle());
-//            System.out.println(university.getStudents());
 
 
-//            session = sessionFactory.getCurrentSession();
 //            session.getTransaction().begin();
-//            User user = session.get(User.class, 3L);
-//            System.out.println(user);
+//            Reader reader = session.get(Reader.class, 1L);
+//
+//            System.out.println(reader.getBooks());
 //            session.getTransaction().commit();
 //            session.close();
         } catch (Exception e){
