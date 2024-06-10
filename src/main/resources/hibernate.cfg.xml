@@ -20,5 +20,7 @@
         <property name="hbm2ddl.auto">update</property>
 
         <mapping class="com.skillbox.hibernate.first.User"></mapping>
+        <mapping class="com.skillbox.hibernate.oneToOne.Employee"></mapping>
+        <mapping class="com.skillbox.hibernate.oneToOne.EmployeeDetails"></mapping>
     </session-factory>
 </hibernate-configuration>

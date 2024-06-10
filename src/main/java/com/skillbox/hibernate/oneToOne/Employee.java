@@ -29,6 +29,10 @@ public class Employee {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public EmployeeDetails getDetails() {
         return details;
     }
@@ -40,8 +44,13 @@ public class Employee {
     public Employee() {
     }
 
+
     @Override
     public String toString() {
-        return String.format("Employee [id = %d, name = %s]", id, name);
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", details=" + details +
+                '}';
     }
 }
