@@ -32,17 +32,17 @@ public class MainEmployee {
         EmployeeDetails employeeDetails = new EmployeeDetails();
         employeeDetails.setEmployee(employee);
         employeeDetails.setEmail("terminator@gmail.com");
-        employeeDetails.setEmail("California");
+        employeeDetails.setCity("California");
 
         EmployeeDetails employeeDetails2 = new EmployeeDetails();
         employeeDetails2.setEmployee(employee);
         employeeDetails2.setEmail("rambo@gmail.com");
-        employeeDetails2.setEmail("Atlanta");
+        employeeDetails2.setCity("Atlanta");
 
         EmployeeDetails employeeDetails3 = new EmployeeDetails();
         employeeDetails3.setEmployee(employee);
         employeeDetails3.setEmail("corben_dalos@gmail.com");
-        employeeDetails3.setEmail("New-York");
+        employeeDetails3.setCity("New-York");
 
         session.save(employeeDetails);
         session.save(employeeDetails2);
