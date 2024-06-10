@@ -25,11 +25,12 @@ public class Main {
         User user2 = session.get(User.class, "Jack");
         User user3 = session.get(User.class, "John");
 
-        User newUser = new User();
-        newUser.setName("Vasya");
-        newUser.setScore(98);
-        session.save(newUser);
-        System.out.println(user + "\n" + user2 + "\n" + user3 + "\n" + newUser);
+//        User newUser = new User();
+//        newUser.setName("Vasya");
+//        newUser.setScore(98);
+//        session.save(newUser);
+        User updateUser = session.get(User.class, "Vasya");
+        System.out.println(user + "\n" + user2 + "\n" + user3 + "\n" + updateUser);
 
         transaction.commit();
         sessionFactory.close();
