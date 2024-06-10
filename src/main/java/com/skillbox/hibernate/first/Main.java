@@ -21,8 +21,8 @@ public class Main {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        User user = session.get(User.class, 1L);
-        User user2 = session.get(User.class, 2L);
+        User user = session.get(User.class, "b");
+        User user2 = session.get(User.class, j"");
         User user3 = session.get(User.class, 3L);
         System.out.println(user + "\n" + user2 + "\n" + user3);
 

@@ -1,7 +1,7 @@
 -- default
 DROP TABLE users IF EXISTS;
-CREATE TABLE users (id bigint, score int, name VARCHAR(255), PRIMARY KEY (id));
-INSERT INTO users (id, name, score) VALUES (1, 'Bob', 80), (2, 'Jack', 80), (3, 'John', 80);
+CREATE TABLE users (id bigint auto_increment, score int, name VARCHAR(255), PRIMARY KEY (id));
+INSERT INTO users (name, score) VALUES ('Bob', 80), ('Jack', 80), ('John', 80);
 
 --OneToOne
 DROP TABLE IF EXISTS employees_details CASCADE;
