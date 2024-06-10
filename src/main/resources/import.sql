@@ -5,7 +5,7 @@ INSERT INTO users (name, score) VALUES ('Bob', 80), ('Jack', 80), ('John', 80);
 
 --OneToOne
 DROP TABLE IF EXISTS employees_details CASCADE;
-CREATE TABLE employees_details (id bigserial PRIMARY KEY, email VARCHAR(255), city varchar(255));
+CREATE TABLE employees_details (id bigint auto_increment PRIMARY KEY, email VARCHAR(255), city varchar(255));
 INSERT INTO employees_details (email, city) VALUES ('terminator@gmail.com', 'California'), ('rembo@gmail.com', 'Atlanta'), ('corben_dallas@gmail.com', 'New York');
 DROP TABLE IF EXISTS employees CASCADE;
 CREATE TABLE employees (id bigserial PRIMARY KEY, name VARCHAR(255), details_id bigint, FOREIGN KEY (details_id) REFERENCES employees_details (id));
