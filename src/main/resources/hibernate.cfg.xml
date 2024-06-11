@@ -17,10 +17,12 @@
         <!-- Set the current session context -->
         <property name="current_session_context_class">thread</property>
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create-drop</property>
 
         <mapping class="com.skillbox.hibernate.first.User"></mapping>
         <mapping class="com.skillbox.hibernate.oneToOne.Employee"></mapping>
         <mapping class="com.skillbox.hibernate.oneToOne.EmployeeDetails"></mapping>
+        <mapping class="com.skillbox.hibernate.manyToOne.Student"></mapping>
+        <mapping class="com.skillbox.hibernate.manyToOne.University"></mapping>
     </session-factory>
 </hibernate-configuration>

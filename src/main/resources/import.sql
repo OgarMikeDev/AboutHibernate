@@ -12,11 +12,11 @@ CREATE TABLE employees (id bigserial PRIMARY KEY, name VARCHAR(255), details_id 
 INSERT INTO employees (name, details_id) VALUES ('Arnold S.', 1), ('Silvester S.', 2), ('Willis B.', 3);
 -- m21
 DROP TABLE IF EXISTS universities CASCADE;
-CREATE TABLE universities (id bigserial PRIMARY KEY, title VARCHAR(255));
+CREATE TABLE universities (id bigint auto_increment PRIMARY KEY, title VARCHAR(255));
 INSERT INTO universities (title) VALUES('DSTU'),('NPU');
 
 DROP TABLE IF EXISTS students CASCADE;
-CREATE TABLE students (id bigserial PRIMARY KEY, name VARCHAR(255), university_id bigint REFERENCES universities (id));
+CREATE TABLE students (id bigint auto_increment PRIMARY KEY, name VARCHAR(255), university_id bigint REFERENCES universities (id));
 INSERT INTO students (name, university_id) VALUES('Alexander', 1),('Bob', 2),('John', 1);
 -- --M2M
 DROP TABLE books IF EXISTS;

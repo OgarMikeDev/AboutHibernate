@@ -12,11 +12,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "students")
 public class Student {
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    private int id;
 
+    @Id
     @Column(name = "name")
     private String name;
 
@@ -24,12 +23,8 @@ public class Student {
     @JoinColumn(name = "university_id")
     private University university;
 
-    public Long getId() {
+    public int getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {

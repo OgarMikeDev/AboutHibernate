@@ -19,23 +19,18 @@ import java.util.List;
         @NamedQuery(name = "withStudents", query = "SELECT u FROM University u JOIN FETCH u.students WHERE u.id = :id")
 })
 public class University {
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    private int id;
 
+    @Id
     @Column(name = "title")
     private String title;
 
     @OneToMany(mappedBy = "university")
     private List<Student> students;
 
-    public Long getId() {
+    public int getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getTitle() {
