@@ -55,10 +55,6 @@ public class University {
 
     @Override
     public String toString() {
-        return "University{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", students=" + students +
-                '}';
+        return String.format("University [id = %d, title = %s, students_count = %d]", id, title, students.size());
     }
 }

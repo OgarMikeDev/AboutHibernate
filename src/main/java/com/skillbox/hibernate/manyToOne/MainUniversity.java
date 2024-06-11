@@ -61,11 +61,11 @@ public class MainUniversity {
 //        System.out.println("First university: " + university.getStudents() + "\nSecond university: " + universityTwo.getStudents());
         Student student = session.get(Student.class, 2);
         Student student2 = session.get(Student.class, 3);
-        System.out.println(student.getName() + "\n" + student2.getName());
+        System.out.println(student + "\n" + student2);
 
         University university = session.get(University.class, 1);
         University university2 = session.get(University.class, 2);
-        System.out.println(university.getTitle() + "\n" + university2.getTitle());
+        System.out.println(university + "\n" + university2);
 
         transaction.commit();
         sessionFactory.close();
