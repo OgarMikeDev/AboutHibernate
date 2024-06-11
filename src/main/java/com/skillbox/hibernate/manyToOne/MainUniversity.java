@@ -35,7 +35,7 @@ public class MainUniversity {
         studentTwo.setName("Boris");
         session.save(studentTwo);
 
-        university.setStudents(List.of(student, studentTwo));
+//        university.setStudents(List.of(student, studentTwo));
         session.save(university);
 
         University universityTwo = new University();
