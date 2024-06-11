@@ -50,9 +50,12 @@ public class Student {
         this.university = university;
     }
 
-
     @Override
     public String toString() {
-        return String.format("Student [id = %d, name = %s]", id, name);
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", university=" + university +
+                '}';
     }
 }
