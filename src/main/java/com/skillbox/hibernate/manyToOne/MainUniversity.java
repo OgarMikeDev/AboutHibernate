@@ -22,6 +22,7 @@ public class MainUniversity {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
+        //Университет МИФИ
         University university = new University();
         university.setTitle("МИФИ");
 
@@ -29,29 +30,32 @@ public class MainUniversity {
         student.setUniversity(university);
         student.setName("Anna");
         session.save(student);
+        university.setStudents(student);
 
         Student studentTwo = new Student();
-//        studentTwo.setUniversity(university);
+        studentTwo.setUniversity(university);
         studentTwo.setName("Boris");
         session.save(studentTwo);
+        university.setStudents(studentTwo);
 
-        university.setStudents(student);
         session.save(university);
 
+        //Университет МГУ им. Ломоносова
         University universityTwo = new University();
         universityTwo.setTitle("МГУ им. Ломоносова");
 
         Student studentThree = new Student();
-//        studentThree.setUniversity(universityTwo);
+        studentThree.setUniversity(universityTwo);
         studentThree.setName("Air");
         session.save(studentThree);
+        universityTwo.setStudents(studentThree);
 
         Student studentFour = new Student();
-//        studentFour.setUniversity(universityTwo);
+        studentFour.setUniversity(universityTwo);
         studentFour.setName("Kiril");
         session.save(studentFour);
+        universityTwo.setStudents(studentFour);
 
-//        universityTwo.setStudents(List.of(studentThree, studentFour));
         session.save(universityTwo);
 
         System.out.println(university.getStudents() + "\n" + universityTwo.getStudents());
