@@ -23,6 +23,13 @@ public class Student {
     @JoinColumn(name = "university_id")
     private University university;
 
+    public Student() {
+    }
+
+    public Student(String name, University university) {
+        this.name = name;
+        this.university = university;
+    }
     public int getId() {
         return id;
     }
@@ -43,13 +50,6 @@ public class Student {
         this.university = university;
     }
 
-    public Student() {
-    }
-
-    public Student(String name, University university) {
-        this.name = name;
-        this.university = university;
-    }
 
     @Override
     public String toString() {

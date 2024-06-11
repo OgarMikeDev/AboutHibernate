@@ -11,13 +11,14 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "universities")
-@NamedQueries({
-        @NamedQuery(name = "withStudents", query = "SELECT u FROM University u JOIN FETCH u.students WHERE u.id = :id")
-})
+//@NamedQueries({
+//        @NamedQuery(name = "withStudents", query = "SELECT u FROM University u JOIN FETCH u.students WHERE u.id = :id")
+//})
 public class University {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +28,7 @@ public class University {
     private String title;
 
     @OneToMany(mappedBy = "university")
-    private List<Student> students;
+    private List<Student> students = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -45,8 +46,8 @@ public class University {
         return students;
     }
 
-    public void setStudents(List<Student> students) {
-        this.students = students;
+    public void setStudents(Student student) {
+        students.add(student);
     }
 
     public University() {
