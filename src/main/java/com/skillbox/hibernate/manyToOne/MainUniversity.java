@@ -58,7 +58,7 @@ public class MainUniversity {
 
         session.save(universityTwo);
 
-        System.out.println(university.getStudents() + "\n" + universityTwo.getStudents());
+        System.out.println("First university: " + university.getStudents() + "\nSecond university: " + universityTwo.getStudents());
 
         transaction.commit();
         sessionFactory.close();
