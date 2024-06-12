@@ -12,15 +12,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "students")
 public class Student {
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Id
     @Column(name = "name")
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "university_id")
+    @JoinColumn(name = "university_title")
     private University university;
 
     public Student() {

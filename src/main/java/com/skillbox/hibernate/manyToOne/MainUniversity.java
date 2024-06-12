@@ -59,13 +59,13 @@ public class MainUniversity {
         session.save(universityTwo);
 
         System.out.println("First university: " + university.getStudents() + "\nSecond university: " + universityTwo.getStudents());
-        Student updateStudent = session.get(Student.class, 3);
-        Student updateStudent2 = session.get(Student.class, 4);
-        System.out.println(updateStudent + "\n" + updateStudent2);
-
-        University updateUniversity = session.get(University.class, 1);
-        University updateUniversity2 = session.get(University.class, 2);
-        System.out.println(updateUniversity + "\n" + updateUniversity2);
+//        Student updateStudent = session.get(Student.class, "Anna");
+//        Student updateStudent2 = session.get(Student.class, "Air");
+//        System.out.println(updateStudent + "\n" + updateStudent2);
+//
+//        University updateUniversity = session.get(University.class, "МИФИ");
+//        University updateUniversity2 = session.get(University.class, "МГУ им. Ломоносова");
+//        System.out.println(updateUniversity + "\n" + updateUniversity2);
 
         transaction.commit();
         sessionFactory.close();
