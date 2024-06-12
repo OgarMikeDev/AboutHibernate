@@ -12,23 +12,25 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "students")
 public class Student {
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    static private int id = 0;
 
+    @Id
     @Column(name = "name")
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "university_id")
+    @JoinColumn(name = "university_title")
     private University university;
 
     public Student() {
+        id += 1;
     }
 
     public Student(String name, University university) {
         this.name = name;
         this.university = university;
+        id += 1;
     }
     public int getId() {
         return id;
