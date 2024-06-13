@@ -20,7 +20,8 @@ import java.util.List;
 //        @NamedQuery(name = "withStudents", query = "SELECT u FROM University u JOIN FETCH u.students WHERE u.id = :id")
 //})
 public class University {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    static private int count = 0;
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
     @Id
@@ -30,6 +31,10 @@ public class University {
     @OneToMany(mappedBy = "university")
     private List<Student> students = new ArrayList<>();
 
+    public University() {
+        count += 1;
+        id = count;
+    }
     public int getId() {
         return id;
     }
@@ -50,8 +55,6 @@ public class University {
         students.add(student);
     }
 
-    public University() {
-    }
 
     @Override
     public String toString() {

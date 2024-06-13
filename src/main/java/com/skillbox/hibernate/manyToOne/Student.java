@@ -12,8 +12,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "students")
 public class Student {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    static private int id = 0;
+    static private int count = 0;
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
 
     @Id
     @Column(name = "name")
@@ -24,17 +25,20 @@ public class Student {
     private University university;
 
     public Student() {
-        id += 1;
+        count += 1;
+        id = count;
     }
 
     public Student(String name, University university) {
         this.name = name;
         this.university = university;
-        id += 1;
+        count += 1;
+        id = count;
     }
     public int getId() {
         return id;
     }
+
 
     public String getName() {
         return name;
