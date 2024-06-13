@@ -24,5 +24,7 @@
         <mapping class="com.skillbox.hibernate.oneToOne.EmployeeDetails"></mapping>
         <mapping class="com.skillbox.hibernate.manyToOne.Student"></mapping>
         <mapping class="com.skillbox.hibernate.manyToOne.University"></mapping>
+        <mapping class="com.skillbox.hibernate.mToM.Book"></mapping>
+        <mapping class="com.skillbox.hibernate.mToM.Reader"></mapping>
     </session-factory>
 </hibernate-configuration>

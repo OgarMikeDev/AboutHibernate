@@ -22,11 +22,13 @@ CREATE TABLE students (id bigint auto_increment PRIMARY KEY, name VARCHAR(255), 
 INSERT INTO students (name, university_id) VALUES('Alexander', 1),('Bob', 2),('John', 1);
 -- --M2M
 DROP TABLE books IF EXISTS;
-CREATE TABLE IF NOT EXISTS books (id bigserial PRIMARY KEY, title VARCHAR(255));
+CREATE TABLE IF NOT EXISTS books (id bigint auto_increment  PRIMARY KEY, title VARCHAR(255));
+--CREATE TABLE IF NOT EXISTS books (id bigint, title VARCHAR(255) PRIMARY KEY);
 INSERT INTO books (title) VALUES('Mistborn'),('Neverwhere'),('Ambers Chronicles'),('Harry Potter'),('Lockwood & Co.'),('Foundation Trilogy'),('Liveship Traders Trilogy'),('A Night in the Lonesome October'),('Da Vinci Code'),('Lord of the Ring');
 
 DROP TABLE IF EXISTS readers CASCADE;
-CREATE TABLE readers (id bigserial PRIMARY KEY, name VARCHAR(255));
+CREATE TABLE readers (id bigint auto_increment PRIMARY KEY, name VARCHAR(255));
+--CREATE TABLE readers (id bigint, name VARCHAR(255) PRIMARY KEY);
 INSERT INTO readers (name) VALUES ('Alexander'), ('Bob');
 
 DROP TABLE IF EXISTS books_readers CASCADE;

@@ -14,19 +14,19 @@ import java.util.List;
 @Entity
 @Table(name = "readers")
 public class Reader {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private static Long count = 0L;
     @Column(name = "id")
     private Long id;
 
+    @Id
     @Column(name = "name")
     private String name;
 
     @ManyToMany
     @JoinTable(
             name = "books_readers",
-            joinColumns = @JoinColumn(name = "reader_id"),
-            inverseJoinColumns = @JoinColumn(name = "book_id")
+            joinColumns = @JoinColumn(name = "reader_name"),
+            inverseJoinColumns = @JoinColumn(name = "book_title")
     )
     private List<Book> books;
 
@@ -55,6 +55,8 @@ public class Reader {
     }
 
     public Reader() {
+        count += 1;
+        id = count;
     }
 
     @Override
